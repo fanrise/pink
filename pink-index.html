@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="main-header">
     <nav class="main-nav">
-      <div class="main-nav__logo">
-        <a href="#">Pink</a>
-      </div>
-      <div class="main-nav__burger">
-        <a href="#">Menu</a>
+      <div class="main-nav__header  main-nav__header--no-shadow">
+        <div class="main-nav__logo">
+          <a href="#">Pink</a>
+        </div>
+        <div class="main-nav__burger">
+          <a href="#">Menu</a>
+        </div>
       </div>
       <div class="main-nav__menu">
-        <ul class="main_nav__items">
+        <ul class="main-nav__items">
           <li class="main-nav__list"><a href="#">Главная</a></li>
           <li class="main-nav__list"><a href="#">Фотографии</a></li>
           <li class="main-nav__list"><a href="#">Конкурс</a></li>
@@ -25,15 +28,17 @@
   </header>
   <main class="index-content">
     <div class="intro">
-      <figure class="intro__foto">
-        <img src="#" alt="Pink city">
-      </figure>
-      <a class="intro__btn" href="#">Скачать приложение</a>
-      <div class="intro__os-wrapper">
-        <div class="intro__os  intro__os--apple"></div>
-        <div class="intro__os  intro__os--android"></div>
-        <div class="intro__os  intro__os--microsoft"></div>
-        <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      <div class="intro__wrapper">
+        <div class="download">
+          <h2>Взгляните на жизнь иначе!</h2>
+          <a class="download__btn" href="#">Скачать приложение</a>
+          <div class="download__icons">
+            <div class="download__icon  download__icon--apple"></div>
+            <div class="download__icon  download__icon--android"></div>
+            <div class="download__icon  download__icon--microsoft"></div>
+            <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
+        </div>
       </div>
     </div>
     <section class="features">
