@@ -2,8 +2,9 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Pink</title>
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <header class="main-header main-header--closed">
@@ -71,28 +72,35 @@
       </div>
     </section>
     <article class="reviews">
-      <div class="reviews__item  reviews__item--first">
-        <h3>Николай Петроз</h3>
-        <p>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи!
-          А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
-        </p>
-      </div>
-      <div class="reviews__item  reviews__item--second">
-        <h3>Николай Петроз</h3>
-        <p>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи!
-          А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
-        </p>
-      </div>
-      <div class="reviews__item  reviews__item--third">
-        <h3>Николай Петроз</h3>
-        <p>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи!
-          А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
-        </p>
+      <div class="reviews__item-wrapper">
+        <div class="reviews__item-container">
+          <div class="reviews__item">
+            <h3>Николай Петров 1</h3>
+            <span hidden>25 лет, водитель трамвая</span>
+            <p>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи!
+              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+            </p>
+          </div>
+          <div class="reviews__item">
+            <h3>Николай Петров 2</h3>
+            <span hidden>25 лет, водитель трамвая</span>
+            <p>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи!
+              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+            </p>
+          </div>
+          <div class="reviews__item">
+            <h3>Николай Петров 3</h3>
+            <span hidden>25 лет, водитель трамвая</span>
+            <p>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи!
+              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+            </p>
+          </div>
+        </div>
       </div>
       <div class="radio">
-        <input class="radio__btn  radio__btn--first" type="radio" name="reviews" checked>
-        <input class="radio__btn  radio__btn--second" type="radio" name="reviews">
-        <input class="radio__btn  radio__btn--third" type="radio" name="reviews">
+        <label><input class="radio__btn  radio__btn--first" type="radio" name="reviews" checked><span></span></label>
+        <label><input class="radio__btn  radio__btn--second" type="radio" name="reviews"><span></span></label>
+        <label><input class="radio__btn  radio__btn--third" type="radio" name="reviews"><span></span></label>
       </div>
     </article>
     <section class="prices">
@@ -121,27 +129,29 @@
         </tr>
       </table>
       <div class="radio">
-        <input class="radio__btn  radio__btn--first" type="radio" name="reviews" checked>
-        <input class="radio__btn  radio__btn--second" type="radio" name="reviews">
-        <input class="radio__btn  radio__btn--third" type="radio" name="reviews">
+        <input class="radio__btn  radio__btn--first" type="radio" name="price" checked>
+        <input class="radio__btn  radio__btn--second" type="radio" name="price">
+        <input class="radio__btn  radio__btn--third" type="radio" name="price">
       </div>
     </section>
     <section class="contacts">
-      <span>Остались вопросы? Свяжитесь с нами!</span>
-      <div class="contact__type">
-        <span>Звоните:</span>
-        +7(812)555-66-66
-      </div>
-      <div class="contact__type">
-        <span>Пишите:</span>
-        mail@htmlacademy.ru
-      </div>
-      <div class="contact__type">
-        <span>Приезжайте в гости:</span>
-        ул.Большая Конюшенная, 19/8
+      <div class="contacts__wrapper">
+        <h2>Остались вопросы? <br>Свяжитесь с нами!</h2>
+        <div class="contacts__type">
+          <span>Звоните:</span><br>
+          +7(812)555-66-66
+        </div>
+        <div class="contacts__type">
+          <span>Пишите:</span><br>
+          mail@htmlacademy.ru
+        </div>
+        <div class="contacts__type">
+          <span>Приезжайте в гости:</span><br>
+          ул.Большая <br>Конюшенная, 19/8
+        </div>
       </div>
       <div class="map">
-        <img src="#" alt="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10257.771280300267!2d36.32121635!3d50.003054850000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1498340935229" width="320" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
     </section>
   </main>
