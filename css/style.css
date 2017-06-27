@@ -671,19 +671,195 @@ ul {
     transition: 1s;
   }
 }
-.prices {
+.price {
   width: 320px;
   background-color: #f2f2f2;
   margin: 0 auto;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.price::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 32px solid #ffffff;
+  border-right: 320px solid transparent;
+  margin-bottom: 65px;
+}
+.price__table-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.price-table {
+  background-color: #ffffff;
+  width: 840px;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-left: 20px;
+  -webkit-transform: translateX(-280px);
+  transform: translateX(-280px);
+}
+.price-table__row th:first-child {
+  display: none;
+}
+.price-table__row td:first-child {
+  display: none;
+}
+.price-table__head {
+  width: 280px;
+  background-color: #283645;
+  color: #ffffff;
+}
+.price-table__head--hit {
+  background-image: url("../img/hit.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+.price-table__head span {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.price-table td {
+  border: 2px solid #e5e5e5;
+  padding: 15px 14px;
+  text-align: left;
+}
+.price-table th {
+  border: 2px solid #f2f2f2;
+}
+.price-table--yes {
+  background: url("../img/yes.png") no-repeat 230px center;
+}
+.price-table--no {
+  background: url("../img/no.png") no-repeat 230px center;
+}
+.price-table--first {
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.price-table--second {
+  -webkit-transform: translateX(-280px);
+  transform: translateX(-280px);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.price-table--third {
+  -webkit-transform: translateX(-560px);
+  transform: translateX(-560px);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.price-radio {
+  margin-top: 35px;
+}
+.price-radio label {
+  display: inline-block;
+  font-size: 0;
+  vertical-align: middle;
+  margin: 0 7px;
+}
+.price-radio label .price-radio__btn {
+  display: none;
+}
+.price-radio label span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #bec2c7;
+  display: block;
+  border: 3px solid #f2f2f2;
+}
+.price-radio label .price-radio__btn:checked + span {
+  border: 3px solid #283645;
+  background-color: transparent;
 }
 @media (min-width: 720px) {
-  .prices {
+  .price {
     width: 700px;
+  }
+  .price::before {
+    border-top: 53px solid #ffffff;
+    border-right: 700px solid transparent;
+    margin-bottom: 35px;
+  }
+  .price-table {
+    width: 620px;
+    width: 280px;
+    margin: 0 auto;
+    -webkit-transform: none;
+    transform: none;
+  }
+  .price-table--yes {
+    background-position: center;
+    font-size: 0;
+  }
+  .price-table--no {
+    background-position: center;
+    font-size: 0;
+  }
+  .price-table th {
+    width: 152px;
+  }
+  .price-table__row th:first-child {
+    display: table-cell;
+    background-color: #f2f2f2;
+  }
+  .price-table__row td:first-child {
+    display: table-cell;
+    text-transform: none;
+  }
+  .price-table__head h2 {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 10px;
+  }
+  .price-table__head span {
+    font-size: 16px;
+  }
+  .price-radio {
+    display: none;
+  }
+  .price-table--first,
+  .price-table--second,
+  .price-table--third {
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+@media (min-width: 720px) and (min-width: 720px) {
+  .price-table {
+    width: 620px;
+  }
+}
+@media (min-width: 720px) and (min-width: 1220px) {
+  .price-table {
+    width: 940px;
   }
 }
 @media (min-width: 1220px) {
-  .prices {
+  .price {
     width: 1200px;
+  }
+  .price::before {
+    border-top: 94px solid #ffffff;
+    border-right: 1200px solid transparent;
+  }
+  .price-table {
+    font-size: 18px;
+  }
+  .price-table h2 {
+    font-size: 24px;
+  }
+  .price-table span {
+    font-size: 18px;
   }
 }
 .contacts {
@@ -809,5 +985,114 @@ ul {
   .map iframe {
     width: 1200px;
     height: 500px;
+  }
+}
+@media (min-width: 720px) {
+  .main-footer {
+    display: block;
+    width: 700px;
+    margin: 0 auto;
+    background-color: #ffffff;
+  }
+  .main-footer a {
+    color: #000000;
+    font-size: 0;
+  }
+  .main-footer__wrapper {
+    width: 280px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .main-footer__wrapper section {
+    width: 33.3%;
+  }
+  .main-footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  .main-footer li {
+    display: inline-block;
+    margin-right: 12px;
+  }
+  .main-footer li:last-child {
+    margin-right: 0;
+  }
+  .main-footer__logo img {
+    display: block;
+  }
+  .social {
+    text-align: center;
+    font-size: 0;
+  }
+  .social__link {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border: 3px solid #e9ebec;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .social__link--twitter {
+    background-image: url("../img/twitter.png");
+  }
+  .social__link--facebook {
+    background-image: url("../img/facebook.png");
+  }
+  .social__link--youtube {
+    background-image: url("../img/youtube.png");
+  }
+  .copyright {
+    text-align: right;
+  }
+  .copyright span {
+    line-height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+  }
+  .copyright a {
+    display: inline-block;
+    background-image: url("../img/htmlacademy.png");
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 34px;
+    vertical-align: middle;
+  }
+}
+@media (min-width: 720px) and (min-width: 720px) {
+  .main-footer__wrapper {
+    width: 620px;
+  }
+}
+@media (min-width: 720px) and (min-width: 1220px) {
+  .main-footer__wrapper {
+    width: 940px;
+  }
+}
+@media (min-width: 1220px) {
+  .main-footer {
+    width: 1200px;
+  }
+  .main-footer__wrapper {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .copyright span {
+    font-size: 18px;
   }
 }

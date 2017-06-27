@@ -6,13 +6,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
 
 
-// gulp.task('start', function() {
-//     browserSync.init({
-//         server: {
-//             baseDir: "."
-//         }
-//     });
-// });
+
 gulp.task('less', function () {
   return gulp.src('less/style.less')
     .pipe(plumber())
@@ -32,4 +26,3 @@ gulp.task('serve', ['less'], function() {
     gulp.watch('less/**/*.less', ['less']);
     gulp.watch('*.html').on('change', browserSync.reload);
 });
-// gulp.task('default', ['serve']);
